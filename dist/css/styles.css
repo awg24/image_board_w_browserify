@@ -1,0 +1,45 @@
+.navbar-default {
+	background: linear-gradient(rgb(86,116,153),rgb(56,101,153));
+	padding-top: 3px;
+	margin-bottom: -20px;
+}
+.btn-stylized {
+	background: linear-gradient(rgb(86,116,153),rgb(56,101,153));
+	border: none;
+	font-size: 24px;
+	margin-left: 70px;
+}
+#image-form{
+	height: 280px;
+	border-bottom: 1px solid black;
+	padding-top: 40px;
+	background: white;
+}
+#image-url,#caption{
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+	height:50px;
+	border-radius: 10px;
+	width:350px;
+	border: 1px solid gray;
+}
+body {
+	background: LightGray;
+}
+.apply-box-shadow{
+	box-shadow: 3px 3px 3px gray;
+}
+.container{
+	margin-top: 20px;
+}
+.btn-center{
+	width: 220px;
+	margin: auto;
+}
+.increase-margin {
+	margin-right: 30px;
+}
+#place-image-here {
+	display: none;
+}

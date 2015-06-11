@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Board</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button class="btn btn-stylized" id="expand-to-menu"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button>
+				<button class="btn" id="delete-all-pics">delete all pics</button>
+				<button class="btn" id="delete-all-comments">delete all comments</button>
+			</div>
+		</div>
+	</nav>
+	<div id="image-form">
+		<form>
+			<input class="form-control" id="image-url" type="text" placeholder="Add image URL">
+			<textarea class="form-control" id="caption"rows="3" placeholder="Add a Caption"></textarea>
+			<div id="error-message" class="text-center text-danger"></div>
+			<div id="success-message" class="text-center text-success"></div>
+			<br>
+			<div class="btn-center">
+				<button id="cancel" type="button" class="btn increase-margin btn-danger">Cancel</button>
+				<button id="submit-image"type="button" class="btn btn-success"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Add Photo</button>
+			</div>
+		</form>	
+	</div>
+	<div id="place-image-here"></div>
+	 <script type="text/template" id="image-holder">
+		 <div data-id="<%= id %>"class="container">
+			<div class="col-xs-2"></div>
+			  <div class="well col-xs-8">
+			    <div class="apply-box-shadow thumbnail">
+			      <img class="img-responsive" src="<%= imageUrl %>">
+			      <div class="caption">
+			        <p ><h3 class="text-center"><%= theCaption %></h3></p>
+			      </div>
+			      <h4>Comments</h4><br>
+			      <form id="submit-comment-form-<%= id %>">
+				      <input type="text" id="input-<%= id %>">
+				      <button class="btn btn-info" id="button-<%= id %>">Submit</button>
+			      </form>
+			     <div id="place-comment-<%= id %>">
+			    	 <div><%= comment %></div>
+			     </div>
+			    </div>
+			  </div>
+			  <div class="col-xs-2"></div>
+		 </div>
+	 </script>
+	<script type="text/javascript" src="scripts/all.js"></script>
+</body>
+</html>
